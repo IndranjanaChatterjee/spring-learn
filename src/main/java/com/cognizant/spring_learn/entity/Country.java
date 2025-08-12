@@ -1,22 +1,21 @@
-package com.cognizant.spring_learn;
+package com.cognizant.spring_learn.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Builder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-
+@Entity
 public class Country {
 
     private static final Logger logger= LoggerFactory.getLogger(Country.class);
+    @Id
     private String code;
     private String name;
-    public Country() {
-        logger.info("Inside Country Constructor.");
-    }
-    public Country(String code) {
-        logger.info("Inside Country.class");
-        this.code = code;
-    }
+
+
 
     public String getCode() {
         logger.info("Inside getCode");
